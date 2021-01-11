@@ -1,4 +1,6 @@
 # pip install essential_generators 
+# ^ remember to install this in order to fetch random sentences ^ 
+
 # get random values of sentances
 from essential_generators import DocumentGenerator
 gen = DocumentGenerator()
@@ -16,11 +18,11 @@ sentence_to_type = gen.sentence()
 print(sentence_to_type) 
 
 # sleep 3 seconds before starting 
-time.sleep(4)
+time.sleep(3)
 start = time.time()
 print("GO!")
 
-
+# keep prompting user for input until it matches the sentence to type
 while True:
     player_input = input()
     if player_input == sentence_to_type:
