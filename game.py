@@ -32,7 +32,9 @@ while True:
 
 # break loop when match 
 # user done typing sentence so end time
+# print rounded time of tiem to type
 end = time.time()
 total_time = end - start
+total_time = round(total_time, 3)
 print("It took you", total_time, "to type the sentance!")
 
