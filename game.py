@@ -51,5 +51,3 @@ elif total_time <= 30:
     print(congragulations[30])
 else:
     print(congragulations[60])
-
-return 0
