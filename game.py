@@ -8,7 +8,6 @@ gen = DocumentGenerator()
 # measure elapsed time
 import time
 
-
 # print a paragraph for user to type
 print()
 time.sleep(1)
@@ -28,15 +27,29 @@ while True:
     if player_input == sentence_to_type:
         break
     else:
-        print("Wrong input! Please try again. \n")
+        print("Wrong input! Please try again.")
     # else pass and keep going until you get it right
-
 
 # break loop when match 
 # user done typing sentence so end time
 # print rounded time of tiem to type
 end = time.time()
 total_time = end - start
-total_time = round(total_time, 3)
-print("It took you", total_time, "to type the sentance!")
+total_time = round(total_time, 2)
+print("You typed the sentence in ", total_time, " seconds!")
 
+congragulations = {60: "Keep it up! I know you can type faster!",
+                   30: "Nice work! Keep it up!",
+                   20: "Good job! You sure can type!", 
+                   10: "Wow! You are fast at typing!"}
+
+if total_time <= 10:
+    print(congragulations[10])
+elif total_time <= 20:
+    print(congragulations[20])
+elif total_time <= 30:
+    print(congragulations[30])
+else:
+    print(congragulations[60])
+
+return 0
