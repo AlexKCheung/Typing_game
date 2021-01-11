@@ -20,12 +20,19 @@ time.sleep(4)
 start = time.time()
 print("GO!")
 
+
 while True:
-    pass
+    player_input = input()
+    if player_input == sentence_to_type:
+        break
+    else:
+        print("Wrong input! Please try again. \n")
+    # else pass and keep going until you get it right
 
 
 # break loop when match 
 # user done typing sentence so end time
 end = time.time()
-print(end - start)
+total_time = end - start
+print("It took you", total_time, "to type the sentance!")
 
