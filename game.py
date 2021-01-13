@@ -34,6 +34,7 @@ while True:
 end = time.time()
 total_time = end - start
 total_time = round(total_time, 2)
+print()
 print("You typed the sentence in ", total_time, " seconds!")
 
 
