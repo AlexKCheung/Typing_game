@@ -9,9 +9,7 @@ gen = DocumentGenerator()
 import time
 
 # print a paragraph for user to type
-print()
-time.sleep(1)
-print("When you see \"GO!\", Type in the sentence below as fast as you can!")
+print("In three seconds, when you see \"GO!\", type in the sentence below as fast as you can!")
 time.sleep(2)
 sentence_to_type = gen.sentence()
 print(sentence_to_type) 
@@ -30,7 +28,7 @@ while True:
         print("Wrong input! Please try again.")
     # else pass and keep going until you get it right
 
-# break loop when match 
+# break loop when input matches sentence
 # user done typing sentence so end time
 # print rounded time of tiem to type
 end = time.time()
@@ -40,7 +38,7 @@ print("You typed the sentence in ", total_time, " seconds!")
 
 
 # characters in the sentence to type
-words = 0
+characters = 0
 for i in sentence_to_type:
     characters += 1
 
@@ -54,16 +52,18 @@ wpm = round(wpm)
 
 print("Your speed is:", wpm, "words per minute / ", cpm, "characters per minute.")
 
-congragulations = {60: "Keep it up! I know you can type faster!",
-                   30: "Nice work! Keep it up!",
-                   20: "Good job! You sure can type!", 
-                   10: "Wow! You are fast at typing!"}
+# congratulates players for their hard work
+congragulations = {0: "Keep it up! I know you can type faster!",
+                   50: "Nice work! Keep it up!",
+                   80: "Good job! You sure can type!", 
+                   100: "Wow! You are fast at typing!"}
 
-if total_time <= 10:
-    print(congragulations[10])
-elif total_time <= 20:
-    print(congragulations[20])
-elif total_time <= 30:
-    print(congragulations[30])
+# average typing speed is 41 wpm 
+if wpm >= 100:
+    print(congragulations[100])
+elif wpm >= 80:
+    print(congragulations[80])
+elif wpm >= 50:
+    print(congragulations[50])
 else:
-    print(congragulations[60])
+    print(congragulations[0])
