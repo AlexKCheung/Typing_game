@@ -8,12 +8,15 @@ gen = DocumentGenerator()
 # measure elapsed time
 import time
 
-# print a paragraph for user to type
+# standarize the length of sentence to prevent anomalies
+sentence_to_type = gen.sentence()
+while len(sentence_to_type) <= 50 and len(sentence_to_type) >= 100:
+    sentence_to_type = gen.sentence()
+
+# start sequence
 print("In three seconds, when you see \"GO!\", type in the sentence below as fast as you can!")
 time.sleep(2)
-sentence_to_type = gen.sentence()
 print(sentence_to_type) 
-
 # sleep 3 seconds before starting 
 time.sleep(3)
 start = time.time()
@@ -37,11 +40,9 @@ total_time = round(total_time, 2)
 print()
 print("You typed the sentence in ", total_time, " seconds!")
 
-
 # characters in the sentence to type
-characters = 0
-for i in sentence_to_type:
-    characters += 1
+# was originally a for loop, changed to use a built in function
+characters = len(sentence_to_type)
 
 # calculate cpm and wpm
 cpm = characters * 60 / total_time
