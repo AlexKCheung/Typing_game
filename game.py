@@ -38,6 +38,22 @@ total_time = end - start
 total_time = round(total_time, 2)
 print("You typed the sentence in ", total_time, " seconds!")
 
+
+# characters in the sentence to type
+words = 0
+for i in sentence_to_type:
+    characters += 1
+
+# calculate cpm and wpm
+cpm = characters * 60 / total_time
+cpm = round(cpm)
+
+# standard calculation of wpm from cpm
+wpm = cpm / 5
+wpm = round(wpm)
+
+print("Your speed is:", wpm, "words per minute / ", cpm, "characters per minute.")
+
 congragulations = {60: "Keep it up! I know you can type faster!",
                    30: "Nice work! Keep it up!",
                    20: "Good job! You sure can type!", 
