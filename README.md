@@ -4,7 +4,8 @@ Typing game that gives you your typing speed.
 ## How to run the game on your laptop!
 1. Go to your computer's command promp
 
-2. Copy the code to your device
+2. Copy the code to your device 
+
 git clone https://github.com/AlexKCheung/Typing_game.git 
 
 3. Go to this file
