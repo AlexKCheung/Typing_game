@@ -1,9 +1,22 @@
 # Typing_game
 Typing game that gives you your typing speed. 
 
-To run game, first run the command:
-pip install essential_generators 
-This allows the program to generate a random sentence for you to type. 
+# How to run the game on your laptop!
+1. Go to your computer's command promp
 
+2. Copy the code to your device
+
+git clone https://github.com/AlexKCheung/Typing_game.git 
+
+3. Go to this file
+cd Typing_game
+
+4. Install random generator for program
+pip install essential_generators 
+
+5. Run program
+game.py
+
+6. Have fun!
 # TODO
-- maybe add an embedded youtube video of how it works?
+1. add an embedded youtube video of how it works?
