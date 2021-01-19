@@ -1,11 +1,10 @@
 # Typing_game
 Typing game that gives you your typing speed. 
 
-# How to run the game on your laptop!
+## How to run the game on your laptop!
 1. Go to your computer's command promp
 
 2. Copy the code to your device
-
 git clone https://github.com/AlexKCheung/Typing_game.git 
 
 3. Go to this file
@@ -18,5 +17,5 @@ pip install essential_generators
 game.py
 
 6. Have fun!
-# TODO
+### TODO
 1. add an embedded youtube video of how it works?
